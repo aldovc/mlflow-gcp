@@ -17,7 +17,7 @@ else
 fi
 
 mlflow server \
-    --file-store /mlflow/mlruns \
     --host 0.0.0.0 \
+    --backend-store-uri $BACKEND_STORE_URI \
     --default-artifact-root gs://$GCP_STORAGE_BUCKET \
     --port 5000

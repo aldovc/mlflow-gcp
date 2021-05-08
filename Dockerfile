@@ -11,6 +11,7 @@ RUN echo "export LC_ALL=$LC_ALL" >> /etc/profile.d/locale.sh
 RUN echo "export LANG=$LANG" >> /etc/profile.d/locale.sh
 
 RUN pip install --ignore-installed google-cloud-storage
+RUN pip install psycopg2-binary
 RUN pip install mlflow
 
 COPY ./files/start.sh /start.sh
